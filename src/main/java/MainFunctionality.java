@@ -40,16 +40,22 @@ public class MainFunctionality extends Constants {
     protected int courseDurationHours() {
         int courseDuration = 0;
         if (courseName.equals(JAVA_DEVELOPER)){
-            int javaCourseDuration = JAVA + JDBC + SPRING;
-            courseDuration = javaCourseDuration;
+            courseDuration = sum(javaDeveloperHours);
             return courseDuration;
         }
         if (courseName.equals(Constants.AQE)) {
-            int aqaCourseDuration = TEST_DESIGN + PAGE_OBJECT + SELENIUM;
-            courseDuration = aqaCourseDuration;
+            courseDuration = sum(aqeSubjectsHours);
             return courseDuration;
         }
         return courseDuration;
+    }
+
+    private int sum(int []subjectsHours) {
+        int sum = 0;
+        int i;
+        for (i = 0; i < subjectsHours.length; i++)
+            sum += subjectsHours[i];
+        return sum;
     }
 
     protected float courseDurationInDays(int courseDurationHours){
@@ -68,7 +74,7 @@ public class MainFunctionality extends Constants {
         return result;
     }
 
-    LocalDate parseStringToDate(String string) {
+    protected LocalDate parseStringToDate(String string) {
         LocalDate localDate;
         try {
             localDate = LocalDate.parse(string);
@@ -80,7 +86,7 @@ public class MainFunctionality extends Constants {
         return localDate;
     }
 
-    LocalDate parseStringToDateRecursion() {
+    private LocalDate parseStringToDateRecursion() {
         String startDate = programInput.inputStartDate();
         return addDaysSkippingWeekends(parseStringToDate(startDate),
                 (int) courseDurationInDays(courseDurationHours()));
