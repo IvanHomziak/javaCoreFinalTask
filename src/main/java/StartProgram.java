@@ -2,10 +2,12 @@ public class StartProgram {
 
     static void startProgram() {
         ProgramInput input = new ProgramInput();
-        CoursesData c = new CoursesData();
+        MainFunctionality c = new MainFunctionality();
+        F f = new F();
         input.inputStudentName();
-        String courseNAme = c.chooseCourse(input.inputCourseName());
-        c.displayCourseName(courseNAme);
+        c.displayAvailableCourses();
+        String courseName = c.chosenCourse(input.inputCourseName());
+        c.displayChosenCourseName(courseName);
         c.displayCourseData();
         c.displayCourseDuration();
         int days = c.courseDurationInDays(c.courseDurationHours());

@@ -1,7 +1,7 @@
 public class Constants {
 
     public static final String
-            JAVA_DEVELOPER = "JAVA DEVELOPER",
+            JAVA_DEVELOPER = "Java Developer",
             AQE = "AQE";
 //    public static final int
 //            JAVA_DURATION = 16,
@@ -13,8 +13,14 @@ public class Constants {
 //
 //    protected final String
 //            JAVA_N = "Java";
+    public static String []availableCourses = {JAVA_DEVELOPER, AQE};
+    public String []aqeSubjects = {"Test Design", "Page Object", "Selenium"};
+    public int []aqeSubjectsHours = {TEST_DESIGN, PAGE_OBJECT, SELENIUM};
+    public String []javaDeveloperSubjects = {"Java", "JDBC", "Spring"};
+    public int []javaDeveloperHours = {JAVA, JDBC, SPRING};
 
-    protected final int
+
+    public static final int
             JAVA = 16,
             JDBC = 24,
             SPRING = 16,

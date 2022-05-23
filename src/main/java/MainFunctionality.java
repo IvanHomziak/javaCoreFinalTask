@@ -1,28 +1,31 @@
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.Arrays;
 
-public class CoursesData extends Constants {
+public class MainFunctionality extends Constants {
 
     private String courseName;
+    private ProgramInput p = new ProgramInput();
 
-    String chooseCourse(String courseName) {
+
+    String chosenCourse(String courseName) {
         return this.courseName = courseName.toUpperCase();
     }
 
-    protected void displayCourseName(String courseName) {
+    protected void displayChosenCourseName(String courseName) {
         System.out.println("CURRICULUM: " + courseName);
     }
 
     protected void displayCourseData() {
-        if (courseName.equals(JAVA_DEVELOPER)) {
-            System.out.println("Java: " + JAVA + " hours");
-            System.out.println("JDBC: " + JDBC + " hours");
-            System.out.println("Spring: " + SPRING + " hours");
-        }
         if (courseName.equals(AQE)) {
-            System.out.println("Test Design: " + TEST_DESIGN + " hours");
-            System.out.println("Page Object: " + PAGE_OBJECT + " hours");
-            System.out.println("Selenium: " + SELENIUM + " hours");
+            for (int i = 0; i < aqeSubjects.length; i++) {
+                System.out.println(aqeSubjects[i] + '\t' + aqeSubjectsHours[i]);
+            }
+        }
+        if (courseName.equals(JAVA_DEVELOPER)) {
+            for (int i = 0; i < javaDeveloperSubjects.length; i++) {
+                System.out.println(javaDeveloperSubjects[i] + '\t' + javaDeveloperHours[i]);
+            }
         }
     }
 
@@ -37,7 +40,7 @@ public class CoursesData extends Constants {
             courseDuration = javaCourseDuration;
             return courseDuration;
         }
-        if (courseName.equals(AQE)) {
+        if (courseName.equals(Constants.AQE)) {
             int aqaCourseDuration = TEST_DESIGN + PAGE_OBJECT + SELENIUM;
             courseDuration = aqaCourseDuration;
             return courseDuration;
@@ -62,7 +65,22 @@ public class CoursesData extends Constants {
     }
 
     LocalDate parseStringToDate(String string) {
+        MainFunctionality c = new MainFunctionality();
+
+        try {
+            LocalDate.parse(string);
+        } catch (Exception e) {
+            System.out.println("Inputted date format is invalid.\nPlease input valid date format:");
+            int days = c.courseDurationInDays(c.courseDurationHours());
+            String startDate = p.inputStartDate();
+            System.out.println(c.addDaysSkippingWeekends(c.parseStringToDate(startDate), days));
+        }
         return LocalDate.parse(string);
+    }
+
+    void displayAvailableCourses() {
+        System.out.println("Available courses:");
+        for (String course : availableCourses) System.out.println("* " + course);
     }
 }
 
