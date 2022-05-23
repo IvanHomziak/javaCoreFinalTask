@@ -1,11 +1,11 @@
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.Arrays;
 
 public class MainFunctionality extends Constants {
 
     private String courseName;
-    private ProgramInput p = new ProgramInput();
+    private ProgramInput programInput = new ProgramInput();
+
 
 
     String chosenCourse(String courseName) {
@@ -27,6 +27,11 @@ public class MainFunctionality extends Constants {
                 System.out.println(javaDeveloperSubjects[i] + '\t' + javaDeveloperHours[i]);
             }
         }
+    }
+
+    void displayAvailableCourses() {
+        System.out.println("Available courses:");
+        for (String course : availableCourses) System.out.println("* " + course);
     }
 
     protected void displayCourseDuration() {
@@ -65,22 +70,23 @@ public class MainFunctionality extends Constants {
     }
 
     LocalDate parseStringToDate(String string) {
-        MainFunctionality c = new MainFunctionality();
-
+        LocalDate localDate;
         try {
-            LocalDate.parse(string);
+            localDate = LocalDate.parse(string);
         } catch (Exception e) {
+            e.fillInStackTrace();
             System.out.println("Inputted date format is invalid.\nPlease input valid date format:");
-            int days = c.courseDurationInDays(c.courseDurationHours());
-            String startDate = p.inputStartDate();
-            System.out.println(c.addDaysSkippingWeekends(c.parseStringToDate(startDate), days));
+            localDate = s();
         }
-        return LocalDate.parse(string);
+        return localDate;
     }
 
-    void displayAvailableCourses() {
-        System.out.println("Available courses:");
-        for (String course : availableCourses) System.out.println("* " + course);
+    LocalDate s() {
+        String startDate = programInput.inputStartDate();
+        return addDaysSkippingWeekends(parseStringToDate(startDate),
+                courseDurationInDays(courseDurationHours()));
     }
+
+
 }
 
