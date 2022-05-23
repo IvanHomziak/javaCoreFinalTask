@@ -2,17 +2,17 @@ public class StartProgram {
 
     static void startProgram() {
         ProgramInput input = new ProgramInput();
-        MainFunctionality c = new MainFunctionality();
-        F f = new F();
+        MainFunctionality mF = new MainFunctionality();
+
         input.inputStudentName();
-        c.displayAvailableCourses();
-        String courseName = c.chosenCourse(input.inputCourseName());
-        c.displayChosenCourseName(courseName);
-        c.displayCourseData();
-        c.displayCourseDuration();
-        int days = (int) c.courseDurationInDays(c.courseDurationHours());
+        mF.displayAvailableCourses();
+        String courseName = mF.chosenCourse(input.inputCourseName());
+        mF.displayChosenCourseName(courseName);
+        mF.displayCourseData();
+        mF.displayCourseDuration();
+        int days = (int) mF.courseDurationInDays(mF.courseDurationHours());
         String startDate = input.inputStartDate();
-        System.out.println(c.addDaysSkippingWeekends(c.parseStringToDate(startDate), days));
+        System.out.println(mF.addDaysSkippingWeekends(mF.parseStringToDate(startDate), days));
     }
 
     public static void main(String[] args) {

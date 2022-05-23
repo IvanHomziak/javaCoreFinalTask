@@ -6,7 +6,7 @@ public class MainFunctionality extends Constants {
     private String courseName;
     private ProgramInput programInput = new ProgramInput();
 
-    String chosenCourse(String courseName) {
+    protected String chosenCourse(String courseName) {
         return this.courseName = courseName.toUpperCase();
     }
 
@@ -27,7 +27,7 @@ public class MainFunctionality extends Constants {
         }
     }
 
-    void displayAvailableCourses() {
+    protected void displayAvailableCourses() {
         System.out.println("Available courses:");
         for (String course : availableCourses) System.out.println("* " + course);
     }
@@ -62,7 +62,7 @@ public class MainFunctionality extends Constants {
         return (float) courseDurationHours / 8;
     }
 
-    public LocalDate addDaysSkippingWeekends(LocalDate date, int days) {
+    protected LocalDate addDaysSkippingWeekends(LocalDate date, int days) {
         LocalDate result = date;
         int addedDays = 0;
         while (addedDays < days) {
