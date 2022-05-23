@@ -33,7 +33,8 @@ public class MainFunctionality extends Constants {
     }
 
     protected void displayCourseDuration() {
-        System.out.println("COURSE DURATION:" + courseDurationHours() + "(hrs)");
+        System.out.println("COURSE DURATION:" + courseDurationHours() + " (hrs), " +
+                courseDurationInDays(courseDurationHours()) + " (days).");
     }
 
     protected int courseDurationHours() {
@@ -51,8 +52,8 @@ public class MainFunctionality extends Constants {
         return courseDuration;
     }
 
-    protected int courseDurationInDays(int courseDurationHours){
-        return courseDurationHours / 8;
+    protected float courseDurationInDays(int courseDurationHours){
+        return (float) courseDurationHours / 8;
     }
 
     public LocalDate addDaysSkippingWeekends(LocalDate date, int days) {
@@ -82,9 +83,7 @@ public class MainFunctionality extends Constants {
     LocalDate parseStringToDateRecursion() {
         String startDate = programInput.inputStartDate();
         return addDaysSkippingWeekends(parseStringToDate(startDate),
-                courseDurationInDays(courseDurationHours()));
+                (int) courseDurationInDays(courseDurationHours()));
     }
-
-
 }
 

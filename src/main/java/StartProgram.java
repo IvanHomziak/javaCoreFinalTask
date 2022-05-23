@@ -10,7 +10,7 @@ public class StartProgram {
         c.displayChosenCourseName(courseName);
         c.displayCourseData();
         c.displayCourseDuration();
-        int days = c.courseDurationInDays(c.courseDurationHours());
+        int days = (int) c.courseDurationInDays(c.courseDurationHours());
         String startDate = input.inputStartDate();
         System.out.println(c.addDaysSkippingWeekends(c.parseStringToDate(startDate), days));
     }

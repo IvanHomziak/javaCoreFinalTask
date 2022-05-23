@@ -11,7 +11,7 @@ public class ProgramInput {
 
 
     void inputStudentName(){
-        System.out.println("Enter the name of the student: ");
+        System.out.println("Enter student name: ");
         inputString();
     }
 
