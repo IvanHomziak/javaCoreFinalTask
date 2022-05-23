@@ -11,8 +11,7 @@ public class ProgramInput {
 
     String inputCourseName(){
         CoursesData coursesData = new CoursesData();
-        System.out.println("Available courses: AQE or Java Developer.");
-        System.out.println("Enter course name: ");
+        System.out.println("Available courses: AQE or Java Developer.\nEnter course name:");
         return coursesData.chooseCourse(sc.nextLine());
     }
 
