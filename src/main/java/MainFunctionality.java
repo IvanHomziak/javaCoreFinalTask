@@ -6,8 +6,6 @@ public class MainFunctionality extends Constants {
     private String courseName;
     private ProgramInput programInput = new ProgramInput();
 
-
-
     String chosenCourse(String courseName) {
         return this.courseName = courseName.toUpperCase();
     }
@@ -76,12 +74,12 @@ public class MainFunctionality extends Constants {
         } catch (Exception e) {
             e.fillInStackTrace();
             System.out.println("Inputted date format is invalid.\nPlease input valid date format:");
-            localDate = s();
+            localDate = parseStringToDateRecursion();
         }
         return localDate;
     }
 
-    LocalDate s() {
+    LocalDate parseStringToDateRecursion() {
         String startDate = programInput.inputStartDate();
         return addDaysSkippingWeekends(parseStringToDate(startDate),
                 courseDurationInDays(courseDurationHours()));
