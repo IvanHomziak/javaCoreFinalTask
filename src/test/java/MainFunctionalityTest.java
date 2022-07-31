@@ -24,19 +24,6 @@ public class MainFunctionalityTest {
     }
 
     @Test
-    public void testCompareCourseData() {
-    }
-
-    @Test
-    public void testDisplayAvailableCourses() {
-        mainFunctionality.displayAvailableCourses();
-    }
-
-    @Test
-    public void testDisplayCourseDuration() {
-    }
-
-    @Test
     public void testCourseDurationHours() {
         mainFunctionality.chosenCourse("aqe");
         assertEquals(mainFunctionality.courseDurationHours(), 42);
@@ -61,5 +48,18 @@ public class MainFunctionalityTest {
     public void testParseStringToDate() {
         LocalDate date1 = mainFunctionality.parseStringToDate(todayDate);
         assertEquals(date1 , date);
+    }
+
+    @Test
+    public void testCompareCourseData() {
+    }
+
+    @Test
+    public void testDisplayAvailableCourses() {
+        mainFunctionality.displayAvailableCourses();
+    }
+
+    @Test
+    public void testDisplayCourseDuration() {
     }
 }
