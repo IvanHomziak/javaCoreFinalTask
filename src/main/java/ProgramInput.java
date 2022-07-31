@@ -22,4 +22,10 @@ public class ProgramInput {
     private String inputString() {
         return sc.nextLine();
     }
+
+    public static void main(String[] args) {
+        String s = "Hello..$";
+        s.replace("$", "");
+        System.out.println(s.replace("$", ""));
+    }
 }

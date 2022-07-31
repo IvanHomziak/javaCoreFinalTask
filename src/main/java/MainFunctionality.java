@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 
@@ -36,7 +38,7 @@ public class MainFunctionality extends Constants {
         System.out.println("COURSE DURATION:" + courseDurationHours() + " (hrs), " +
                 courseDurationInDays(courseDurationHours()) + " (days).");
     }
-
+    @Test
     protected int courseDurationHours() {
         int courseDuration = 0;
         if (courseName.equals(JAVA_DEVELOPER)){
