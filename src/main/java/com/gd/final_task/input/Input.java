@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Input {
 
 
-    private Scanner sc = new Scanner(System.in);
+    private final Scanner sc = new Scanner(System.in);
 
     public void inputStudentName(){
         System.out.println("Enter student name: ");
@@ -23,12 +23,7 @@ public class Input {
     }
 
     private String inputString() {
-        return sc.nextLine();
-    }
 
-    public static void main(String[] args) {
-        String s = "Hello..$";
-        s.replace("$", "");
-        System.out.println(s.replace("$", ""));
+        return sc.nextLine();
     }
 }

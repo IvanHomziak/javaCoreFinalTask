@@ -1,36 +1,44 @@
 package com.gd.final_task.calculations;
 
-import com.gd.final_task.data.Data;
-import org.junit.Test;
-
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
-import static com.gd.final_task.data.Data.AQE;
-import static com.gd.final_task.data.Data.JAVA_DEVELOPER;
+import static com.gd.final_task.enum_data.EnumData.AQE;
+import static com.gd.final_task.enum_data.EnumData.JAVA_DEVELOPER;
 
-public class Calculations {
 
-    protected int []aqeSubjectsHours = {TEST_DESIGN, PAGE_OBJECT, SELENIUM};
-    protected int []javaDeveloperHours = {JAVA, JDBC, SPRING};
+public class Calculations{
 
-    private static final int
-            JAVA = 16,
-            JDBC = 24,
-            SPRING = 16,
-            TEST_DESIGN = 10,
-            PAGE_OBJECT = 16,
-            SELENIUM = 16;
+    private static final Map<String, Integer> javaDevCourse = new HashMap<>();
+    private static final Map<String, Integer> aqeCourse = new HashMap<>();
 
-    @Test
+    public Map<String, Integer> getJavaDevCourseData() {
+        javaDevCourse.put("Java", 16);
+        javaDevCourse.put("JDBC", 24);
+        javaDevCourse.put("Spring", 16);
+        return javaDevCourse;
+    }
+    public Map<String, Integer> getAqeCourseData() {
+        aqeCourse.put("Test design", 10);
+        aqeCourse.put("Page Object", 16);
+        aqeCourse.put("Selenium", 16);
+        return aqeCourse;
+    }
+
+    public static int programDuration(Map<String, Integer> program) {
+        return program.values().stream().mapToInt(Integer::intValue).sum();
+    }
+
     public int courseDurationHours(String courseName) {
         int courseDuration = 0;
-        if (courseName.equals(JAVA_DEVELOPER)){
-            courseDuration = sum(javaDeveloperHours);
+        if (courseName.equals(JAVA_DEVELOPER.toString())){
+            courseDuration = programDuration(getJavaDevCourseData());
             return courseDuration;
         }
-        if (courseName.equals(AQE)) {
-            courseDuration = sum(aqeSubjectsHours);
+        if (courseName.equals(AQE.toString())) {
+            courseDuration = programDuration(getAqeCourseData());
             return courseDuration;
         }
         return courseDuration;
@@ -59,5 +67,4 @@ public class Calculations {
         }
         return result;
     }
-
 }

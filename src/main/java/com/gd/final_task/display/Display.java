@@ -4,26 +4,25 @@ import com.gd.final_task.calculations.Calculations;
 import com.gd.final_task.choose_actions.ChooseCourse;
 import com.gd.final_task.data.Data;
 
+import static com.gd.final_task.enum_data.EnumData.AQE;
+import static com.gd.final_task.enum_data.EnumData.JAVA_DEVELOPER;
+
 
 public class Display extends Data {
 
     Calculations calculations = new Calculations();
-    ChooseCourse chooseCourse = new ChooseCourse();
+    Data data = new Data();
 
     public void displayChosenCourseName(String courseName) {
         System.out.println("CURRICULUM: " + courseName);
     }
 
     public void displayCourseData(String courseName) {
-        if (courseName.equals(AQE)) {
-            for (int i = 0; i < aqeSubjects.length; i++) {
-                System.out.println(aqeSubjects[i] + '\t' + aqeSubjectsHours[i]);
-            }
+        if (courseName.equals(AQE.toString())) {
+            System.out.println(calculations.getJavaDevCourseData());
         }
-        if (courseName.equals(JAVA_DEVELOPER)) {
-            for (int i = 0; i < javaDeveloperSubjects.length; i++) {
-                System.out.println(javaDeveloperSubjects[i] + '\t' + javaDeveloperHours[i]);
-            }
+        if (courseName.equals(JAVA_DEVELOPER.toString())) {
+            System.out.println(calculations.getAqeCourseData());
         }
     }
 
