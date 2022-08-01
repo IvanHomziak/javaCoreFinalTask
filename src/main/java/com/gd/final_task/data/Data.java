@@ -1,6 +1,8 @@
-public class Constants {
+package com.gd.final_task.data;
 
-    protected static final String
+public class Data {
+
+    public static final String
             JAVA_DEVELOPER = "Java Developer",
             AQE = "AQE";
 
