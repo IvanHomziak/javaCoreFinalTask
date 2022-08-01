@@ -44,14 +44,6 @@ public class Calculations{
         return courseDuration;
     }
 
-    private int sum(int []subjectsHours) {
-        int sum = 0;
-        int i;
-        for (i = 0; i < subjectsHours.length; i++)
-            sum += subjectsHours[i];
-        return sum;
-    }
-
     public float courseDurationInDays(int courseDurationHours){
         return (float) courseDurationHours / 8;
     }
