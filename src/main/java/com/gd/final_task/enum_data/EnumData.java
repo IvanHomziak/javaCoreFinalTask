@@ -3,7 +3,8 @@ package com.gd.final_task.enum_data;
 public enum EnumData {
 
     JAVA_DEVELOPER("Java Developer"),
-    AQE("AQE");
+    AQE("AQE"),
+    RANDOM("Random");
 
     private String courseName;
 
@@ -11,3 +12,4 @@ public enum EnumData {
         this.courseName = courseName;
     }
 }
+
