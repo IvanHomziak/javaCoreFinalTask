@@ -1,3 +1,7 @@
 # Project exclude paths
 /target/
-/.idea/
+
+# IntellijIDEA files #
+.idea
+*.iml
+*.iws
