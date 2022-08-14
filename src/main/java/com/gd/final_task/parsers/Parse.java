@@ -31,5 +31,5 @@ public class Parse {
         return calculations.addDaysSkippingWeekends(parseStringToDate(startDate),
                 (int) calculations.courseDurationInDays(calculations.courseDurationHours(courseName)));
     }
-
 }
+
