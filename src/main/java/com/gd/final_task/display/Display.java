@@ -3,8 +3,8 @@ package com.gd.final_task.display;
 import com.gd.final_task.calculations.Calculations;
 import com.gd.final_task.data.Data;
 
-import static com.gd.final_task.enum_data.EnumData.AQE;
-import static com.gd.final_task.enum_data.EnumData.JAVA_DEVELOPER;
+import static com.gd.final_task.enum_data.CoursesData.AQE;
+import static com.gd.final_task.enum_data.CoursesData.JAVA_DEVELOPER;
 
 
 public class Display extends Data {
@@ -16,11 +16,11 @@ public class Display extends Data {
     }
 
     public void displayCourseData(String courseName) {
-        if (courseName.equals(AQE.toString())) {
-            System.out.println(calculations.getJavaDevCourseData());
-        }
-        if (courseName.equals(JAVA_DEVELOPER.toString())) {
+        if (courseName.equals(AQE.getCourseName())) {
             System.out.println(calculations.getAqeCourseData());
+        }
+        if (courseName.equals(JAVA_DEVELOPER.getCourseName())) {
+            System.out.println(calculations.getJavaDevCourseData());
         }
     }
 

@@ -1,33 +1,16 @@
 package com.gd.final_task.enum_data;
 
-import org.omg.CORBA.Object;
-
 import java.util.ArrayList;
-import java.util.Objects;
 
-import static com.gd.final_task.enum_data.EnumData.AQE;
-import static com.gd.final_task.enum_data.EnumData.JAVA_DEVELOPER;
-import static org.junit.Assert.assertTrue;
+import static com.gd.final_task.enum_data.CoursesData.AQE;
+import static com.gd.final_task.enum_data.CoursesData.JAVA_DEVELOPER;
 
 public class AvailableCourses {
 
-    private String a = "Hi";
-    private static String object;
-    private static String string;
-
-
     public ArrayList<String> getAvailableCourses() {
         ArrayList<String> availableCourses = new ArrayList();
-        availableCourses.add(JAVA_DEVELOPER.toString());
-        availableCourses.add(AQE.toString());
+        availableCourses.add(JAVA_DEVELOPER.getCourseName());
+        availableCourses.add(AQE.getCourseName());
         return availableCourses;
-    }
-
-
-
-
-
-
-    public static void main(String[] args) {
     }
 }

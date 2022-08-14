@@ -1,13 +1,11 @@
 package com.gd.final_task.calculations;
 
+import com.gd.final_task.enum_data.CoursesData;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.gd.final_task.enum_data.EnumData.AQE;
-import static com.gd.final_task.enum_data.EnumData.JAVA_DEVELOPER;
-
 
 public class Calculations{
 
@@ -31,17 +29,22 @@ public class Calculations{
         return program.values().stream().mapToInt(Integer::intValue).sum();
     }
 
+    public static void main(String[] args) {
+        Calculations calculations = new Calculations();
+        System.out.println(calculations.courseDurationHours("Java Developer"));
+
+    }
     public int courseDurationHours(String courseName) {
-        int courseDuration = 0;
-        if (courseName.equals(JAVA_DEVELOPER.toString())){
-            courseDuration = programDuration(getJavaDevCourseData());
-            return courseDuration;
+        int courseDurationHours = 0;
+        if (courseName.equals(CoursesData.JAVA_DEVELOPER.getCourseName())){
+            courseDurationHours = programDuration(getJavaDevCourseData());
+            return courseDurationHours;
         }
-        if (courseName.equals(AQE.toString())) {
-            courseDuration = programDuration(getAqeCourseData());
-            return courseDuration;
+        else if (courseName.equals(CoursesData.AQE.getCourseName())) {
+            courseDurationHours = programDuration(getAqeCourseData());
+            return courseDurationHours;
         }
-        return courseDuration;
+        return courseDurationHours;
     }
 
     public float courseDurationInDays(int courseDurationHours){

@@ -23,7 +23,6 @@ public class Input {
     }
 
     private String inputString() {
-
         return sc.nextLine();
     }
 }
