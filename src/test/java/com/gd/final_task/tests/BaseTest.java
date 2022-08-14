@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.gd.final_task.enum_data.CoursesData.AQE;
 import static com.gd.final_task.enum_data.CoursesData.JAVA_DEVELOPER;
