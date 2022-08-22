@@ -1,11 +1,16 @@
 package com.gd.final_task.calculations;
 
+import com.gd.final_task.data.Student;
 import com.gd.final_task.enum_data.Curriculum;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Calculations{
 
@@ -29,11 +34,6 @@ public class Calculations{
         return program.values().stream().mapToInt(Integer::intValue).sum();
     }
 
-    public static void main(String[] args) {
-        Calculations calculations = new Calculations();
-        System.out.println(calculations.courseDurationHours("Java Developer"));
-
-    }
     public int courseDurationHours(String courseName) {
         int courseDurationHours = 0;
         if (courseName.equals(Curriculum.JAVA_DEVELOPER.getCourseName())){
@@ -61,5 +61,27 @@ public class Calculations{
             }
         }
         return result;
+    }
+
+    public Map<Student, Integer> calculateBusinessDays(final List<Student> studentsList, LocalDate waypointDate) {
+        Map<Student, Integer> calculatedStudentsDays = new HashMap<>();
+
+        for (Student student : studentsList) {
+            if (student.getStartDate() == null || waypointDate == null) {
+                throw new IllegalArgumentException("Invalid method argument(s) to " +
+                        "countBusinessDaysBetween (" + student.getStartDate()
+                        + "," + waypointDate + ")");
+            }
+
+            Predicate<LocalDate> isWeekend = date -> date.getDayOfWeek() == DayOfWeek.SATURDAY
+                    || date.getDayOfWeek() == DayOfWeek.SUNDAY;
+
+            long daysBetween = ChronoUnit.DAYS.between(student.getStartDate(), waypointDate);
+
+            calculatedStudentsDays.put(student, (int) Stream.iterate(student.getStartDate(), date -> date.plusDays(1))
+                    .limit(daysBetween)
+                    .filter(isWeekend.negate()).count());
+        }
+        return calculatedStudentsDays;
     }
 }
