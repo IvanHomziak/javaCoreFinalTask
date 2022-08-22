@@ -7,6 +7,7 @@ import static com.gd.final_task.utils.Start.startProgram;
 public class Start extends Input {
 
     public static void main(String[] args) {
+
         startProgram();
     }
 }
