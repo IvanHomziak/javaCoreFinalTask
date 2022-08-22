@@ -2,8 +2,8 @@ package com.gd.final_task.enum_data;
 
 import java.util.ArrayList;
 
-import static com.gd.final_task.enum_data.CoursesData.AQE;
-import static com.gd.final_task.enum_data.CoursesData.JAVA_DEVELOPER;
+import static com.gd.final_task.enum_data.Curriculum.AQE;
+import static com.gd.final_task.enum_data.Curriculum.JAVA_DEVELOPER;
 
 public class AvailableCourses {
 

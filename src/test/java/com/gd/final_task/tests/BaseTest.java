@@ -1,16 +1,16 @@
 package com.gd.final_task.tests;
 
 import com.gd.final_task.calculations.Calculations;
-import com.gd.final_task.enum_data.CoursesData;
-import com.gd.final_task.enum_data.Subjects;
+import com.gd.final_task.enum_data.Curriculum;
+import com.gd.final_task.enum_data.Course;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
 
-import static com.gd.final_task.enum_data.CoursesData.AQE;
-import static com.gd.final_task.enum_data.CoursesData.JAVA_DEVELOPER;
+import static com.gd.final_task.enum_data.Curriculum.AQE;
+import static com.gd.final_task.enum_data.Curriculum.JAVA_DEVELOPER;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -18,15 +18,16 @@ public class BaseTest {
 
     private final Calculations calculations = new Calculations();
 
+    //перевір що години відповідають кількості годин на курсі. Два аргументи перевірити назву курсу та його довжину в годинах
     @Test(dataProvider = "getAvailableCourses")
-    public void testCourseDurationIsEqualZero(CoursesData coursesData) {
+    public void testCourseDurationIsEqualZero(Curriculum coursesData) {
         assertThat(calculations.courseDurationHours(coursesData.getCourseName()))
                 .describedAs("Course duration is equal to ZERO:" + coursesData)
                 .isNotEqualTo(0);
     }
 
     @Test(dataProvider = "getAvailableCourses")
-    public void testCourseDurationIsNotNull(CoursesData coursesData) {
+    public void testCourseDurationIsNotNull(Curriculum coursesData) {
         assertThat(calculations.courseDurationHours(coursesData.getCourseName()))
                 .describedAs("Course is equal to NULL" + coursesData)
                 .isNotNull();
@@ -57,10 +58,10 @@ public class BaseTest {
     }
 
     @Test(dataProvider = "getAvailableCourses")
-    public void testProgramDuration(CoursesData coursesData) {
+    public void testProgramDuration(Curriculum coursesData) {
         assertThat(calculations.courseDurationHours(coursesData.getCourseName()))
                 .describedAs("Course duration is incorrect")
-                .isEqualTo(coursesData.getSubjects().stream().mapToInt(Subjects::getSubjectDuration)
+                .isEqualTo(coursesData.getSubjects().stream().mapToInt(Course::getSubjectDuration)
                         .sum());
     }
 

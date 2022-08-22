@@ -1,4 +1,4 @@
-package com.gd.final_task.input;
+package com.gd.final_task.io;
 
 import java.util.Scanner;
 

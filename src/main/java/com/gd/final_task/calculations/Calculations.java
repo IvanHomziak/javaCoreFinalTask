@@ -1,6 +1,6 @@
 package com.gd.final_task.calculations;
 
-import com.gd.final_task.enum_data.CoursesData;
+import com.gd.final_task.enum_data.Curriculum;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -36,11 +36,11 @@ public class Calculations{
     }
     public int courseDurationHours(String courseName) {
         int courseDurationHours = 0;
-        if (courseName.equals(CoursesData.JAVA_DEVELOPER.getCourseName())){
+        if (courseName.equals(Curriculum.JAVA_DEVELOPER.getCourseName())){
             courseDurationHours = programDuration(getJavaDevCourseData());
             return courseDurationHours;
         }
-        else if (courseName.equals(CoursesData.AQE.getCourseName())) {
+        else if (courseName.equals(Curriculum.AQE.getCourseName())) {
             courseDurationHours = programDuration(getAqeCourseData());
             return courseDurationHours;
         }

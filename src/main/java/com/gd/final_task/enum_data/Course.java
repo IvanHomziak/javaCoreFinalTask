@@ -1,6 +1,6 @@
 package com.gd.final_task.enum_data;
 
-public enum Subjects {
+public enum Course {
 
     JAVA("Java", 16),
     JDBC("JDBC", 24),
@@ -12,7 +12,7 @@ public enum Subjects {
     private final String name;
     private final int courseSubjectDuration;
 
-    Subjects(String name, int courseSubjectDuration) {
+    Course(String name, int courseSubjectDuration) {
         this.name = name;
         this.courseSubjectDuration = courseSubjectDuration;
     }

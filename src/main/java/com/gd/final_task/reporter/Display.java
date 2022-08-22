@@ -1,10 +1,10 @@
-package com.gd.final_task.display;
+package com.gd.final_task.reporter;
 
 import com.gd.final_task.calculations.Calculations;
 import com.gd.final_task.data.Data;
 
-import static com.gd.final_task.enum_data.CoursesData.AQE;
-import static com.gd.final_task.enum_data.CoursesData.JAVA_DEVELOPER;
+import static com.gd.final_task.enum_data.Curriculum.AQE;
+import static com.gd.final_task.enum_data.Curriculum.JAVA_DEVELOPER;
 
 
 public class Display extends Data {

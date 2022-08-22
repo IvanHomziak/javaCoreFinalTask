@@ -3,21 +3,17 @@ package com.gd.final_task.enum_data;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.gd.final_task.enum_data.Subjects.*;
+import static com.gd.final_task.enum_data.Course.*;
 
-public enum CoursesData {
+public enum Curriculum {
 
     JAVA_DEVELOPER("Java Developer", Arrays.asList(JAVA, JDBC, SPRING)),
     AQE("AQE", Arrays.asList(TEST_DESIGN, PAGE_OBJECT, SELENIUM));
 
     private final String courseName;
-    private List<Subjects> subjects;
+    private final List<Course> subjects;
 
-    CoursesData(String courseName) {
-        this.courseName = courseName;
-    }
-
-    CoursesData(String courseName, List<Subjects> subjects) {
+    Curriculum(String courseName, List<Course> subjects) {
         this.courseName = courseName;
         this.subjects = subjects;
     }
@@ -26,7 +22,7 @@ public enum CoursesData {
         return this.courseName;
     }
 
-    public List<Subjects> getSubjects() {
+    public List<Course> getSubjects() {
         return this.subjects;
     }
 }
