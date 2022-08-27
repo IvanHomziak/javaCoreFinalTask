@@ -6,7 +6,7 @@ import com.gd.final_task.io.Input;
 import com.gd.final_task.parsers.Parse;
 import com.gd.final_task.reporter.Display;
 
-public class Start {
+public class StartProgram {
 
     public static void startProgram() {
         Input input = new Input();

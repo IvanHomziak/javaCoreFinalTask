@@ -9,7 +9,7 @@ import static com.gd.final_task.enum_data.Curriculum.JAVA_DEVELOPER;
 
 public class Display extends Data {
 
-    Calculations calculations = new Calculations();
+    private final Calculations calculations = new Calculations();
 
     public void displayChosenCourseName(String courseName) {
         System.out.println("CURRICULUM: " + courseName);
