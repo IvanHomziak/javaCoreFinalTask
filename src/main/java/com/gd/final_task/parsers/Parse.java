@@ -1,7 +1,7 @@
 package com.gd.final_task.parsers;
 
 import com.gd.final_task.calculations.Calculations;
-import com.gd.final_task.choose_actions.ChooseCourse;
+import com.gd.final_task.chooseactions.ChooseCourse;
 import com.gd.final_task.io.Input;
 
 import java.time.LocalDate;

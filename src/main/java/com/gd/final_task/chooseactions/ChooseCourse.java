@@ -1,4 +1,4 @@
-package com.gd.final_task.choose_actions;
+package com.gd.final_task.chooseactions;
 
 public class ChooseCourse {
 

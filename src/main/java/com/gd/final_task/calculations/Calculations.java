@@ -1,7 +1,7 @@
 package com.gd.final_task.calculations;
 
 import com.gd.final_task.data.Student;
-import com.gd.final_task.enum_data.Curriculum;
+import com.gd.final_task.enumdata.Curriculum;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

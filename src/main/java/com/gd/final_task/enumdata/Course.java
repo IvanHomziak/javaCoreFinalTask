@@ -1,4 +1,4 @@
-package com.gd.final_task.enum_data;
+package com.gd.final_task.enumdata;
 
 public enum Course {
 

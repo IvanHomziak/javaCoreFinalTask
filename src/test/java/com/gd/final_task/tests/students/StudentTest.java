@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.gd.final_task.enum_data.Curriculum.AQE;
-import static com.gd.final_task.enum_data.Curriculum.JAVA_DEVELOPER;
+import static com.gd.final_task.enumdata.Curriculum.AQE;
+import static com.gd.final_task.enumdata.Curriculum.JAVA_DEVELOPER;
 
 public class StudentTest {
 
