@@ -58,28 +58,11 @@ public class DurationTest {
                 .isEqualTo(courseDuration);
     }
 
-    @Test(dataProvider = "getAvailableCoursesWithStartDate")
-    public void testCourseStartLastDay(Curriculum coursesData, String startDay, LocalDate lastDay) {
-        Parse parser = new Parse();
-        assertThat(calculations.addDaysSkippingWeekends(parser.parseStringToDate(startDay),
-                (int) calculations.courseDurationInDays(calculations.courseDurationHours(coursesData.getCourseName()))))
-                .describedAs(coursesData + " course last day is incorrect")
-                .isEqualTo(lastDay); //last date
-    }
-
     @DataProvider(name = "getAvailableCourses")
     public static Object[][] getAvailableCoursesDataProvider() {
         return new Object[][]{
                 {JAVA_DEVELOPER, 56},
                 {AQE, 42}
-        };
-    }
-
-    @DataProvider(name = "getAvailableCoursesWithStartDate")
-    public static Object[][] getAvailableCoursesWithStartDate() {
-        return new Object[][]{
-                {JAVA_DEVELOPER, "2022-10-12", LocalDate.of(2022, 10, 21)},
-                {AQE, "2022-10-12", LocalDate.of(2022, 10, 19)}
         };
     }
 }
