@@ -1,7 +1,7 @@
-package com.gd.final_task.calculations;
+package com.gd.final_task.functionality;
 
-import com.gd.final_task.data.Student;
-import com.gd.final_task.enumdata.Curriculum;
+import com.gd.final_task.studentcourses.Student;
+import com.gd.final_task.enums.Curriculum;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-public class Calculations{
+public class Functionality {
 
     private static final Map<String, Integer> javaDevCourse = new HashMap<>();
     private static final Map<String, Integer> aqeCourse = new HashMap<>();

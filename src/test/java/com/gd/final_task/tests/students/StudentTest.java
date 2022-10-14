@@ -1,7 +1,7 @@
 package com.gd.final_task.tests.students;
 
-import com.gd.final_task.calculations.Calculations;
-import com.gd.final_task.data.Student;
+import com.gd.final_task.functionality.Functionality;
+import com.gd.final_task.studentcourses.Student;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -9,14 +9,14 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.gd.final_task.enumdata.Curriculum.AQE;
-import static com.gd.final_task.enumdata.Curriculum.JAVA_DEVELOPER;
+import static com.gd.final_task.enums.Curriculum.AQE;
+import static com.gd.final_task.enums.Curriculum.JAVA_DEVELOPER;
 
 public class StudentTest {
 
     @Test(dataProvider = "getStudents", expectedExceptions = IllegalArgumentException.class)
     public void testProgramDurationHasIllegalArgumentException(List<Student> studentsList, LocalDate entryPoint) {
-        new Calculations().calculateBusinessDays(studentsList, entryPoint);
+        new Functionality().calculateBusinessDays(studentsList, entryPoint);
     }
 
     @DataProvider(name = "getStudents")

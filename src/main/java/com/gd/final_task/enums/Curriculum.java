@@ -1,9 +1,9 @@
-package com.gd.final_task.enumdata;
+package com.gd.final_task.enums;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static com.gd.final_task.enumdata.Course.*;
+import static com.gd.final_task.enums.Course.*;
 
 public enum Curriculum {
 

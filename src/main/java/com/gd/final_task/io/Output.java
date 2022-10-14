@@ -1,15 +1,15 @@
-package com.gd.final_task.reporter;
+package com.gd.final_task.io;
 
-import com.gd.final_task.calculations.Calculations;
-import com.gd.final_task.data.Data;
+import com.gd.final_task.functionality.Functionality;
+import com.gd.final_task.studentcourses.AvailableCourses;
 
-import static com.gd.final_task.enumdata.Curriculum.AQE;
-import static com.gd.final_task.enumdata.Curriculum.JAVA_DEVELOPER;
+import static com.gd.final_task.enums.Curriculum.AQE;
+import static com.gd.final_task.enums.Curriculum.JAVA_DEVELOPER;
 
 
-public class Display extends Data {
+public class Output extends AvailableCourses {
 
-    private final Calculations calculations = new Calculations();
+    private final Functionality calculations = new Functionality();
 
     public void displayChosenCourseName(String courseName) {
         System.out.println("CURRICULUM: " + courseName);

@@ -1,7 +1,5 @@
-package com.gd.final_task.parsers;
+package com.gd.final_task.functionality;
 
-import com.gd.final_task.calculations.Calculations;
-import com.gd.final_task.chooseactions.ChooseCourse;
 import com.gd.final_task.io.Input;
 
 import java.time.LocalDate;
@@ -9,7 +7,7 @@ import java.time.LocalDate;
 public class Parse {
 
     private final ChooseCourse chooseCourse = new ChooseCourse();
-    private final Calculations calculations = new Calculations();
+    private final Functionality calculations = new Functionality();
     private final Input input = new Input();
 
     private final String courseName = chooseCourse.chosenCourse(input.inputCourseName());

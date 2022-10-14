@@ -1,4 +1,4 @@
-package com.gd.final_task.main;
+package com.gd.final_task;
 
 import com.gd.final_task.io.Input;
 

@@ -1,6 +1,6 @@
-package com.gd.final_task.data;
+package com.gd.final_task.studentcourses;
 
-import com.gd.final_task.enumdata.Curriculum;
+import com.gd.final_task.enums.Curriculum;
 import lombok.Data;
 
 import java.time.LocalDate;
