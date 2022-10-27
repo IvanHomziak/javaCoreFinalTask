@@ -1,10 +1,10 @@
-package com.gd.final_task.io;
+package org.javacorefinaltask.io;
 
-import com.gd.final_task.functionality.Functionality;
-import com.gd.final_task.studentcourses.AvailableCourses;
+import org.javacorefinaltask.functionality.Functionality;
+import org.javacorefinaltask.studentcourses.AvailableCourses;
 
-import static com.gd.final_task.enums.Curriculum.AQE;
-import static com.gd.final_task.enums.Curriculum.JAVA_DEVELOPER;
+import static org.javacorefinaltask.enums.Curriculum.AQE;
+import static org.javacorefinaltask.enums.Curriculum.JAVA_DEVELOPER;
 
 
 public class Output extends AvailableCourses {

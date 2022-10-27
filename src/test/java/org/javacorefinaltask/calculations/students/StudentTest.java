@@ -1,7 +1,7 @@
-package com.gd.final_task.tests.students;
+package org.javacorefinaltask.calculations.students;
 
-import com.gd.final_task.functionality.Functionality;
-import com.gd.final_task.studentcourses.Student;
+import org.javacorefinaltask.functionality.Functionality;
+import org.javacorefinaltask.studentcourses.Student;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.gd.final_task.enums.Curriculum.AQE;
-import static com.gd.final_task.enums.Curriculum.JAVA_DEVELOPER;
+import static org.javacorefinaltask.enums.Curriculum.AQE;
+import static org.javacorefinaltask.enums.Curriculum.JAVA_DEVELOPER;
 
 public class StudentTest {
 

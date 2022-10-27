@@ -1,4 +1,4 @@
-package com.gd.final_task.io;
+package org.javacorefinaltask.io;
 
 import java.util.Scanner;
 

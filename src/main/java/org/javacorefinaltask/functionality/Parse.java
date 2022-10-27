@@ -1,6 +1,6 @@
-package com.gd.final_task.functionality;
+package org.javacorefinaltask.functionality;
 
-import com.gd.final_task.io.Input;
+import org.javacorefinaltask.io.Input;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;

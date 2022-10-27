@@ -1,4 +1,4 @@
-package com.gd.final_task.enums;
+package org.javacorefinaltask.enums;
 
 public enum Course {
 

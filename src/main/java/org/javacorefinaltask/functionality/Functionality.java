@@ -1,7 +1,7 @@
-package com.gd.final_task.functionality;
+package org.javacorefinaltask.functionality;
 
-import com.gd.final_task.studentcourses.Student;
-import com.gd.final_task.enums.Curriculum;
+import org.javacorefinaltask.studentcourses.Student;
+import org.javacorefinaltask.enums.Curriculum;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

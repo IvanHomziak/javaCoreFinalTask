@@ -1,10 +1,10 @@
-package com.gd.final_task.utils;
+package org.javacorefinaltask.utils;
 
-import com.gd.final_task.functionality.ChooseCourse;
-import com.gd.final_task.functionality.Functionality;
-import com.gd.final_task.functionality.Parse;
-import com.gd.final_task.io.Input;
-import com.gd.final_task.io.Output;
+import org.javacorefinaltask.functionality.ChooseCourse;
+import org.javacorefinaltask.functionality.Functionality;
+import org.javacorefinaltask.functionality.Parse;
+import org.javacorefinaltask.io.Input;
+import org.javacorefinaltask.io.Output;
 
 public class Start {
 

@@ -1,4 +1,4 @@
-package com.gd.final_task.functionality;
+package org.javacorefinaltask.functionality;
 
 public class ChooseCourse {
 

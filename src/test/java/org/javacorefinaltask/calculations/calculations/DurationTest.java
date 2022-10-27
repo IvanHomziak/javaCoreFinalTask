@@ -1,16 +1,16 @@
-package com.gd.final_task.tests.calculations;
+package org.javacorefinaltask.calculations.calculations;
 
-import com.gd.final_task.functionality.Functionality;
-import com.gd.final_task.enums.Course;
-import com.gd.final_task.enums.Curriculum;
+import org.javacorefinaltask.functionality.Functionality;
+import org.javacorefinaltask.enums.Course;
+import org.javacorefinaltask.enums.Curriculum;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
 
-import static com.gd.final_task.enums.Curriculum.AQE;
-import static com.gd.final_task.enums.Curriculum.JAVA_DEVELOPER;
+import static org.javacorefinaltask.enums.Curriculum.AQE;
+import static org.javacorefinaltask.enums.Curriculum.JAVA_DEVELOPER;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class DurationTest {
