@@ -51,6 +51,10 @@ public class Functionality {
         return (float) courseDurationHours / 8;
     }
 
+    public int courseDaysDuration(String courseName){
+        return (int) new Functionality().courseDurationInDays(new Functionality().courseDurationHours(courseName));
+    }
+
     public LocalDate addDaysSkippingWeekends(LocalDate date, int days) {
         LocalDate result = date;
         int addedDays = 0;

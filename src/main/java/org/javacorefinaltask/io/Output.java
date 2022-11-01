@@ -34,4 +34,10 @@ public class Output extends AvailableCourses {
                 calculations.courseDurationInDays(calculations.courseDurationHours(courseName)) + " (days).");
     }
 
+    public void displayFullData(String data) {
+        new Output().displayChosenCourseName(data);
+        new Output().displayCourseData(data);
+        new Output().displayCourseDuration(data);
+    }
+
 }
